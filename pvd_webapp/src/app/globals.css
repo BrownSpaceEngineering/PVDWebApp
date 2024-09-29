@@ -2,21 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root {
+  --background: #ffffff; /* Default light background */
+  --foreground: #171717; /* Default light foreground */
+  
+  /* Define color palette variables */
+  --lapis-lazuli: #2F5C88;
+  --indigo-dye: #264A6F;
+  --persian-blue: #1C3854;
+  --prussian-blue: #122438;
+  --oxford-blue: #0B162B;
+  --rich-black-fogra29: #081120;
+  --charcoal: #3A404C;
+  --black-coral: #616670;
+  --roman-silver: #81848C;
+  --spanish-gray: #9A9CA3;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0a0a; /* Dark mode background */
+    --foreground: #ededed; /* Dark mode foreground */
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--foreground); /* Use foreground variable */
+  background: var(--background); /* Use background variable */
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,4 +36,21 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-} */
+}
+
+/* Optional: Use palette variables */
+.bg-lapis-lazuli {
+  background-color: var(--lapis-lazuli);
+}
+.text-lapis-lazuli {
+  color: var(--lapis-lazuli);
+}
+
+.bg-indigo-dye {
+  background-color: var(--indigo-dye);
+}
+.text-indigo-dye {
+  color: var(--indigo-dye);
+}
+
+/* You can continue for all other colors using --variables */
