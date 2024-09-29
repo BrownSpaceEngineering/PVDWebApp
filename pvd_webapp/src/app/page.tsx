@@ -14,6 +14,7 @@ function index() {
             console.log(data)
             setMessage(data.message)
           }
+          // Random comment for things
         )
     },[])
     return (
