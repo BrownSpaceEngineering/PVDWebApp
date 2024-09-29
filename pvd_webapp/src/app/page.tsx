@@ -14,7 +14,6 @@ function index() {
             console.log(data)
             setMessage(data.message)
           }
-          // RANDOMER COMMENT TO TEST THINGS
         )
     },[])
     return (
