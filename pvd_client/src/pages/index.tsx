@@ -17,8 +17,28 @@ function index() {
         )
     },[])
     return (
+      
         <div>
-            <h1>{message}</h1>
+            <section className="controls">
+            <div className="tabs">
+                <button className="tab active">Control</button>
+                <button className="tab">Move</button>
+                <button className="tab">Draw</button>
+            </div>
+            <div className="block-area">
+                <div className="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
+            </div>
+        </section>
+        <section className="display-area">
+            <div className="screen"></div>
+            <div className="controls">
+                <button className="btn stop"></button>
+                <button className="btn play"></button>
+                <button className="btn circle"></button>
+            </div>
+        </section>
         </div>
         
     )
