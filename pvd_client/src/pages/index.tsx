@@ -16,9 +16,19 @@ function index() {
           }
         )
     },[])
+    
+    const [windowWidth, setWindowWidth] = useState(0);
+
+    useEffect(() => {
+        setWindowWidth(window.innerWidth);
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
-      
-        <div>
+      <div style={{ display: 'flex', flexDirection: windowWidth < 1200 ? 'column' : 'row' }}>
+        <div style={{ flex: 1, padding: '10px', border: '0px solid black' }}>
             <section className="controls">
             <div className="tabs">
                 <button className="tab active">Control</button>
@@ -30,16 +40,20 @@ function index() {
                 <div className="block"></div>
                 <div className="block"></div>
             </div>
-        </section>
+            </section>
+        </div>
+        <div style={{ flex: 1, padding: '10px', border: '0px solid black' }}>
         <section className="display-area">
             <div className="screen"></div>
-            <div className="controls">
+            <div className="buttons">
                 <button className="btn stop"></button>
                 <button className="btn play"></button>
                 <button className="btn circle"></button>
             </div>
         </section>
         </div>
+      </div>
+        
         
     )
 }
