@@ -110,18 +110,17 @@ main {
   border-bottom: 2px solid #fff;
 }
 
-.block-area {
+.blocklyDiv {
   display: flex;
   flex-direction: column;
   gap: 15px;
-}
-
-.block {
-  width: 30vh;
-  height: 5vh;
+  height: 25vh;
+  width: 100vh;
   background-color: #6367ac;
   border-radius: 5px;
+  border-color: #ededed;
 }
+
 
 .display-area {
   display: flex;
@@ -141,37 +140,4 @@ main {
 .controls {
   display: flex;
   gap: 15px;
-}
-
-.btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #6367ac;
-  border: none;
-  cursor: pointer;
-}
-
-.btn.stop {
-  background-color: #333;
-}
-
-.btn.play {
-  background-color: #6367ac;
-  position: relative;
-}
-
-.btn.play::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-style: solid;
-  border-width: 8px 0 8px 14px;
-  border-color: transparent transparent transparent #fff;
-}
-
-.btn.circle {
-  background-color: #fff;
 }
