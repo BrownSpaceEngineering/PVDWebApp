@@ -131,8 +131,8 @@ main {
 }
 
 .screen {
-  height: 50vh;
-  width: 75vh;
+  height: 25vh;
+  width: 100vh;
   background-color: #fff;
   border-radius: 10px;
   margin-bottom: 20px;
