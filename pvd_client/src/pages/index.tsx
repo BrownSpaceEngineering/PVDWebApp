@@ -63,6 +63,7 @@ function Index() {
     ]
   }
 
+  // the red underline is annoying but if i get rid of it then there are two block windows! not sure why but this works!
   useEffect(() => {
     if (typeof window !== 'undefined' && !window.blocklyInjected) {
       Blockly.inject('blocklyDiv', { toolbox: toolbox });
@@ -78,13 +79,15 @@ function Index() {
   }, []);
 
   return (
-    <div style={{ display: 'flex', flexDirection: windowWidth < 1200 ? 'column' : 'row' }}>
-      <div id="blocklyDiv" style={{ height: "75vh", width: windowWidth < 1200 ? "100%" : "50%" }}></div>
+    <div>
       <div style={{ flex: 1, padding: '10px', border: '0px solid black' }}>
         <section className="display-area">
           <div className="screen"></div>
         </section>
       </div>
+
+      <div id="blocklyDiv" style={{ height: "60vh", width: "75vw" }}></div>
+      
     </div>
   )
 }
