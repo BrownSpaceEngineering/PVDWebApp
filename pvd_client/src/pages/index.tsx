@@ -29,6 +29,40 @@ function Index() {
   // Inject
   Blockly.setLocale(En);
 
+  Blockly.Blocks['pixel_set'] = {
+    init: function() {
+      this.setColour(160);
+      this.appendDummyInput()
+        .appendField(new Blockly.FieldLabel('Set Pixel'));
+      this.appendValueInput('X')
+          .setCheck('Number')
+          .appendField('X');
+      this.appendValueInput('Y')
+          .setCheck('Number')
+          .appendField('Y');
+      this.appendValueInput('On')
+      .appendField('On')
+      this.setNextStatement(true);
+      this.setPreviousStatement(true);
+    }
+  }
+    Blockly.Blocks['run'] = {
+      init: function() {
+        this.setColour(160);
+        this.appendDummyInput()
+        .appendField(new Blockly.FieldLabel('Run'));
+        this.setNextStatement(true);
+      }
+  }   
+  Blockly.Blocks['end'] = {
+    init: function() {
+      this.setColour(160);
+      this.appendDummyInput()
+      .appendField(new Blockly.FieldLabel('End'));
+      this.setPreviousStatement(true);
+    }
+}   
+
   const toolbox = {
     "kind": "flyoutToolbox",
     "contents": [
@@ -36,6 +70,7 @@ function Index() {
         "kind": "block",
         "type": "controls_if"
       },
+      
       {
         "kind": "block",
         "type": "controls_repeat_ext"
@@ -50,16 +85,25 @@ function Index() {
       },
       {
         "kind": "block",
+        "type": "logic_boolean"
+      },
+  
+      {
+        "kind": "block",
         "type": "math_arithmetic"
       },
       {
         "kind": "block",
-        "type": "text"
-      },
+        "type": "pixel_set"
+      },  
       {
         "kind": "block",
-        "type": "text_print"
-      },
+        "type": "run"
+      },   
+      {
+        "kind": "block",
+        "type": "end"
+      },   
     ]
   }
 
