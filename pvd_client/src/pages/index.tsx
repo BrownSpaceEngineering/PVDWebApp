@@ -64,7 +64,7 @@ function Index() {
     const index = y * 256 + x;
     const pixels = gridRef.current;
     if (index >= 0 && index < pixels.length) {
-      pixels[index].style.backgroundColor = on ? 'black' : 'white';
+      pixels[index].style.backgroundColor = on ? 'white' : 'black';
     }
   
   }
@@ -117,14 +117,6 @@ function Index() {
         "kind": "block",
         "type": "pixel_set"
       },  
-      {
-        "kind": "block",
-        "type": "run"
-      },   
-      {
-        "kind": "block",
-        "type": "end"
-      },   
     ]
   }
 
