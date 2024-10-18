@@ -13,7 +13,9 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.0",
-    "tle": "^3.0.0"
+    "node-fetch": "^3.3.2",
+    "tle": "^3.0.0",
+    "tle.js": "^4.9.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
