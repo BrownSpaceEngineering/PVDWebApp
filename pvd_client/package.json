@@ -11,6 +11,7 @@
   "dependencies": {
     "blockly": "^11.1.1",
     "next": "14.2.14",
+    "node-fetch": "^3.3.2",
     "react": "^18",
     "react-dom": "^18",
     "tle": "^3.0.0"
